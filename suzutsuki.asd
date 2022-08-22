@@ -5,7 +5,9 @@
   :depends-on ()
   :components ((:module "src"
                 :components
-                ((:file "main"))))
+                ((:file "package")
+                 (:file "main" :depends-on ("cell"))
+                 (:file "cell"))))
   :description ""
   :in-order-to ((test-op (test-op "suzutsuki/tests"))))
 
