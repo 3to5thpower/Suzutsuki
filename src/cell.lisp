@@ -9,9 +9,12 @@
     (num-codons 1)) ; 所持コドン数
 
 ; codonはLispコードデータで表される
-;　DNAはcodonのリスト
+; DNAはcodonのリスト
 ;[todo] 突然変異の挙動設定フラグの追加
-(defstruct codon (body nil) (len (length body)) (buffered-p nil))
+(defstruct 
+    (codon 
+     (:constructor make-codon (body &aux (len (length body)) (buffered-p nil))))
+    body  len  buffered-p)
 
 ; 細胞は属性情報、DNA、タンパク質の情報を持つ。
 (defstruct cell (attributes nil) (dna nil) (proteins nil))
