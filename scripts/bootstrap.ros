@@ -3,7 +3,7 @@
 #|
 DN=$(dirname $0)
 REPO=$(cd $DN/.. && pwd)
-exec ros -Q -S ${REPO} -- $0 "$@"
+exec ros -Q -S ${REPO} -- $0 $REPO "$@"
 |#
 (progn ;;init forms
   (ros:ensure-asdf)
@@ -16,5 +16,5 @@ exec ros -Q -S ${REPO} -- $0 "$@"
 
 (defun main (&rest argv)
   (declare (ignorable argv))
-  (suzutsuki:main))
+  (suzutsuki:main argv))
 ;;; vim: set ft=lisp lisp:

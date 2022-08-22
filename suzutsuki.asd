@@ -7,6 +7,8 @@
                 :components
                 ((:file "package")
                  (:file "main" :depends-on ("cell"))
+                 (:file "eval-env" :depends-on ("cell"))
+                 (:file "file")
                  (:file "cell"))))
   :description ""
   :in-order-to ((test-op (test-op "suzutsuki/tests"))))
