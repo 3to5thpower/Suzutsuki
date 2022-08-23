@@ -5,5 +5,9 @@
     (let ((attrs (subseq cell 0 4))
           (dna (nth 4 cell))
           (proteins (nth 5 cell)))
-       (make-cell
-          :proteins proteins :dna nil :attributes nil)))
+       (print attrs)
+       (make-cell :attributes 
+         (make-attributes :life-duration (car attrs)
+            :life-left (cadr attrs) :fitness (caddr attrs)
+            :num-codons (cadddr attrs))
+         :dna dna :proteins proteins)))

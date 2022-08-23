@@ -25,5 +25,7 @@
 (deftest eval-env
   (testing "parse-cell"
     (ok (equalp (parse-cell '(100 100 50 1 ((lambda (x) (1+ x))) ((lambda (x) (1+ x)))))
-                (make-cell :attributes nil :dna nil 
+                (make-cell :attributes 
+                  (make-attributes :life-duration 100 :life-left 100 :fitness 50 :num-codons 1) 
+                  :dna '((lambda (x) (1+ x))) 
                   :proteins '((lambda (x) (1+ x))))))))
