@@ -11,3 +11,11 @@
             :life-left (cadr attrs) :fitness (caddr attrs)
             :num-codons (cadddr attrs))
          :dna dna :proteins proteins)))
+
+
+
+; 細胞の成長を表現する関数
+; cell -> cell
+(defun get-codon (cell)
+  (when (can-get-p (caddr cell))
+      ))
