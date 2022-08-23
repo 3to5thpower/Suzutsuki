@@ -5,4 +5,5 @@
              :attributes-life-duration :attributes-life-left
              :attributes-fitness :attributes-num-codons
              :life-duration :codon-body :codon-len :codon-buffered-p)
+    (:export :can-get-p)
     (:export :parse-cell))

@@ -9,6 +9,7 @@
                  (:file "main" :depends-on ("cell"))
                  (:file "eval-env" :depends-on ("cell"))
                  (:file "file")
+                 (:file "util")
                  (:file "cell"))))
   :description ""
   :in-order-to ((test-op (test-op "suzutsuki/tests"))))
